@@ -109,3 +109,6 @@ dist
 
 #WebStorm generated files
 .idea/
+
+#CDN Files
+/public/lib/
