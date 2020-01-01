@@ -1,0 +1,27 @@
+{
+  "name": "yelpcamp",
+  "version": "1.0.0",
+  "description": "A NodeJS Express web app.",
+  "author": "Fernando Picoral <fernandopicoral@gmail.com> (https://fernandopicoral.com)",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "~1.19.0",
+    "ejs": "~3.0.1",
+    "express": "~4.17.1",
+    "util": "^0.12.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "uglify-es": "^3.3.9",
+    "uglifycss": "0.0.29"
+  },
+  "license": "MIT"
+}
