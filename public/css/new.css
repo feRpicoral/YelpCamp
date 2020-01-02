@@ -1,0 +1,54 @@
+html,
+body {
+    scroll-behavior: smooth;
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    margin-top: 5vh;
+    border-radius: 16px;
+}
+
+.wrap img {
+    width: 480px;
+}
+
+.image-confirm button {
+    min-width: 60px;
+    border-radius: 10px;
+}
+
+.lead {
+    font-size: 30px;
+}
+
+footer {
+    margin-top: 56px;
+    z-index: -100;
+    height: 56px;
+    bottom: 0;
+    position: relative;
+}
+
+.img-preview {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    animation: slide ease 1.5s forwards;
+}
+
+@keyframes slide {
+    from {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+    to {
+        height: 340px;
+        visibility: visible;
+        opacity: 1;
+    }
+}

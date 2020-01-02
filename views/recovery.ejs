@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- jQuery -->
+        <script type="text/javascript" src="/lib/jquery-3.4.1.slim.min.js"></script>
+
+        <!-- BS4 & Requirements (Popper) -->
+        <script type="text/javascript" src="/lib/popper-1.16.min.js"></script>
+        <script type="text/javascript" src="/lib/bootstrap-4.4.1.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="/lib/bootstrap-4.4.1.min.css">
+
+        <!-- Custom CSS -->
+        <link type="text/css" rel="stylesheet" href="/css/recovery.css">
+
+        <!-- Custom JS -->
+        <script type="text/javascript" src="/js/recovery.js"></script>
+
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>YelpCamp | Recover Password</title>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="/">YelpCamp</a>
+        </nav>
+
+        <h1 class="display-4 text-center mb-4">Recover<br>Password</h1>
+        <div class="container wrap d-flex justify-content-center text-center">
+            <div class="confirmation d-none">
+                <p class="lead">We sent an email to <strong>name@email.com</strong><span class="d-none">'s account email</span><br>Follow the steps there to recover your account</p>
+                <a href="/" class="btn btn-outline-primary">Home</a>
+            </div>
+            <form method="POST" class="" id="form">
+                <div class="form-group">
+                    <input type="text" placeholder="Username" class="form-control" name="username" id="username" aria-describedby="userHelp" required>
+                    <small id="userHelp" class="form-text text-muted">You can also enter your email address</small>
+                </div>
+                <button type="submit" class="btn btn-outline-primary">Recover</button>
+            </form>
+        </div>
+
+        <footer class="container-fluid bg-light navbar-light d-flex align-items-center justify-content-center p-0">
+            <p class="m-0 p-0">Fernando Picoral @ 2020</p>
+        </footer>
+
+    </body>
+
+</html>

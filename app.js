@@ -7,11 +7,17 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
-const campgrounds = require('./routes/campgrounds'),
-      index       = require('./routes/index');
+const campground = require('./routes/campground'),
+      index      = require('./routes/index'),
+      login      = require('./routes/login'),
+      signup     = require('./routes/signup'),
+      recovery   = require('./routes/recovery');
 
 app.use('/', index);
-app.use('/campgrounds', campgrounds);
+app.use('/campground', campground);
+app.use('/login', login);
+app.use('/signup', signup);
+app.use('/recovery', recovery);
 
 app.get('*', (req, res) => {
     res.send('Page Not Found!<br><a href="/">Home</a>')

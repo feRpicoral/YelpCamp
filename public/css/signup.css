@@ -1,0 +1,36 @@
+html,
+body {
+    scroll-behavior: smooth;
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.form-wrap {
+    padding-top: 5vh;
+}
+
+.b-left {
+    border-left: 1px solid #ced4da;
+}
+
+footer {
+    z-index: -100;
+    height: 56px;
+    bottom: 0;
+    position: relative;
+}
+
+/*BS4 'md' breakpoint (landscape mobile and tablets)*/
+@media screen and (max-width: 768px) {
+    .display-1 {
+        font-size: 75px;
+    }
+    .b-left {
+        border-top: 1px solid #ced4da;
+        border-left: none;
+        margin-top: 25px;
+        padding-top: 25px;
+    }
+}

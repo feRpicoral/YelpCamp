@@ -2,7 +2,11 @@ const express = require('express'),
     router  = express.Router();
 
 router.get('/', (req, res, next) => {
-    res.send('<h1>Campgrounds!</h1>')
+    res.render('recovery');
+});
+
+router.post('/', (req, res, next) => {
+    res.status(204).send();
 });
 
 module.exports = router;

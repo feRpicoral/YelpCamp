@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- jQuery -->
+        <script type="text/javascript" src="/lib/jquery-3.4.1.slim.min.js"></script>
+
+        <!-- BS4 & Requirements (Popper) -->
+        <script type="text/javascript" src="/lib/popper-1.16.min.js"></script>
+        <script type="text/javascript" src="/lib/bootstrap-4.4.1.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="/lib/bootstrap-4.4.1.min.css">
+
+        <!-- Custom CSS -->
+        <link type="text/css" rel="stylesheet" href="/css/signup.css">
+
+        <!-- Custom JS -->
+        <script type="text/javascript" src="/js/signup.js"></script>
+
+        <!-- reCaptcha v2 -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>YelpCamp | Sign Up</title>
+
+
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="/">YelpCamp</a>
+        </nav>
+
+        <div class="form-wrap container">
+            <h1 class="display-1 text-center mb-4">Create your account</h1>
+            <form method="POST">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="userIcon">@</span>
+                                </div>
+                                <input type="text" class="form-control" id="username"  aria-describedby="userIcon" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 b-left">
+                        <div class="form-group">
+                            <label for="address-1">Address Line 1</label>
+                            <input type="text" class="form-control" id="address-1" name="addressOne" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address-2">Address Line 2</label>
+                            <input type="text" class="form-control" id="address-2" name="addressTwo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select class="custom-select" id="country" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city" name="city" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="state">Province or State</label>
+                            <input type="text" class="form-control" id="state" name="state" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="zip">Postal Code</label>
+                            <input type="text" class="form-control" id="zip" name="zip" required>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row my-5">
+                    <div class="col">
+
+                        <div class="form-group text-center justify-content-center">
+                            <div class="custom-control custom-checkbox mb-2">
+                                <input type="checkbox" class="custom-control-input" id="agreeTerms" name="agreeTerms" required>
+                                <label class="custom-control-label" for="agreeTerms">I agree to the terms and conditions</label>
+                            </div>
+
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input type="checkbox" class="custom-control-input" id="emailUpdates" name="emailUpdates">
+                                <label class="custom-control-label" for="emailUpdates">I would like to receive updates by email</label>
+                            </div>
+
+                            <script>$('#emailUpdates').prop('checked', true)</script>
+
+                            <div class="g-recaptcha"
+                                 data-sitekey="6Ld0AMoUAAAAAJ6dQsAJGxn8bPqQJ5mBtoxZV9JR"
+                                 data-size="invisible"
+                                 data-callback="formSubmit">
+                            </div>
+
+                            <button class="btn btn-outline-success" id="submit-btn" type="submit">Create Account</button>
+
+                            <script>
+                                const form = document.querySelector('form');
+                                function formSubmit(response) {
+                                    form.submit();
+
+                                }
+                                form.addEventListener('submit', function (event) {
+                                    event.preventDefault();
+                                    grecaptcha.reset();
+                                    grecaptcha.execute();
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+
+
+        <footer class="container-fluid bg-light navbar-light d-flex align-items-center justify-content-center p-0">
+            <p class="m-0 p-0">Fernando Picoral @ 2020</p>
+        </footer>
+    </body>
+
+</html>
