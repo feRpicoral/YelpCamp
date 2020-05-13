@@ -37,7 +37,10 @@ footer {
     height: 0;
     visibility: hidden;
     opacity: 0;
-    animation: slide ease 1.5s forwards;
+}
+
+.img-preview-show {
+    animation: slide ease-in-out 1.5s forwards;
 }
 
 @keyframes slide {

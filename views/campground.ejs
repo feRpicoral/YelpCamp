@@ -25,7 +25,58 @@
     </head>
 
     <body>
-        <h1>Campground not found!</h1>
+
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="/">YelpCamp</a>
+        </nav>
+
+        <div class="container campground p-3">
+
+            <h1 class="display-3 mb-5"><%=name%></h1>
+
+            <div class="row">
+                <div class="col-12 col-md">
+                    <img class="img-thumbnail img-fluid" src="https://images.unsplash.com/photo-1497900304864-273dfb3aae33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="Campground Image">
+                </div>
+
+                <div class="col-12 col-md overflow-auto mr-3 mt-4 mt-md-auto">
+                    <div class="text-justify">
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec vulputate massa. Nulla scelerisque lorem a ipsum convallis, at tempus arcu faucibus. Phasellus porta, sapien non hendrerit elementum, velit ipsum accumsan sem, eu tincidunt ipsum nisl sed sapien. Donec pharetra lorem eget efficitur viverra. Nullam volutpat posuere nisi sit amet elementum. Vestibulum non tellus varius, bibendum dolor non, viverra velit. Quisque pellentesque tincidunt dui id lobortis. Quisque vel odio euismod, faucibus orci quis, pretium velit. Proin semper sagittis mattis. Nulla suscipit tellus tortor, vitae accumsan purus sodales vel. Vestibulum fringilla maximus ullamcorper. Sed interdum tempus tellus bibendum maximus. Aenean imperdiet metus eget velit maximus ultrices. Nunc tempor vestibulum neque, non hendrerit dui consequat id.</p>
+                    </div>
+
+                    <div class="info mt-5">
+                        <p class="lead title">More about this campground</p>
+
+                        <div class="address lead">
+                            <p class="line-1">Saint Jose St</p>
+                            <p class="line-2">3556 Apt 30</p>
+                            <p class="country d-inline-block">United States</p><span class="d-inline-block mx-2">-</span><p class="state d-inline-block">Nevada</p>
+                            <p class="phone">+1 (602) 928-4129</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="btns text-center">
+                <div class="row justify-content-center">
+                    <a href="#" class="btn btn-lg btn-outline-danger">Favorite</a>
+                    <div class="mx-4"></div>
+                    <a href="#" class="btn btn-lg btn-outline-primary">Book</a>
+                </div>
+                <div class="row justify-content-center mt-3">
+                    <p class="lead price">Only $<span><%=price%></span>/night</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <footer class="container-fluid bg-light navbar-light d-none d-md-flex align-items-center justify-content-center p-0">
+            <p class="m-0 p-0">Fernando Picoral @ 2020</p>
+        </footer>
     </body>
 
 </html>

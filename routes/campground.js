@@ -2,8 +2,11 @@ const express = require('express'),
       router  = express.Router();
 
 //Get campground by ID
-router.get('/', (req, res, next) => {
-    res.render('campground');
+router.get('/:id', (req, res, next) => {
+    res.render('campground', {
+        name: 'Campground Name',
+        price: '24.99'
+    });
 });
 
 //New campground form
